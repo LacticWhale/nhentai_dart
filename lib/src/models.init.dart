@@ -9,9 +9,10 @@ import 'models/book_title.dart' as p2;
 import 'models/comment.dart' as p3;
 import 'models/images/images.dart' as p4;
 import 'models/search/search_result.dart' as p5;
-import 'models/tag.dart' as p6;
-import 'models/tag_type.dart' as p7;
-import 'models/user.dart' as p8;
+import 'models/search/search_sort.dart' as p6;
+import 'models/tag.dart' as p7;
+import 'models/tag_type.dart' as p8;
+import 'models/user.dart' as p9;
 
 void initializeMappers() {
   p0.BookMapper.ensureInitialized();
@@ -23,7 +24,8 @@ void initializeMappers() {
   p4.CoverMapper.ensureInitialized();
   p4.CoverThumbnailMapper.ensureInitialized();
   p5.SearchResultMapper.ensureInitialized();
-  p6.TagMapper.ensureInitialized();
-  p7.TagTypeMapper.ensureInitialized();
-  p8.UserMapper.ensureInitialized();
+  p6.SearchSortMapper.ensureInitialized();
+  p7.TagMapper.ensureInitialized();
+  p8.TagTypeMapper.ensureInitialized();
+  p9.UserMapper.ensureInitialized();
 }

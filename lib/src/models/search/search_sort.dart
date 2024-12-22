@@ -1,4 +1,10 @@
+import 'package:dart_mappable/dart_mappable.dart';
+
+part 'search_sort.mapper.dart';
+
+
 /// Search sorting options.
+@MappableEnum()
 enum SearchSort {
   /// Sort by recent uploads.
   recent(),
