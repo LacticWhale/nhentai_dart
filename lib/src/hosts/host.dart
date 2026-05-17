@@ -1,6 +1,5 @@
 import 'package:meta/meta.dart';
 
-import 'api_host.dart';
 import 'host_type.dart';
 import 'http_host.dart';
 import 'image_host.dart';
@@ -17,8 +16,6 @@ abstract class Host implements HttpHost {
     ]
   ) {
     switch (type) {
-      case HostType.api:
-        return ApiHost(authority, ssl);
       case HostType.image:
         return ImageHost(authority, ssl);
       case HostType.thumbnail:

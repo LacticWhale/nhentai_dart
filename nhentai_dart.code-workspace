@@ -21,5 +21,8 @@
 			"pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
 			"*.dart": "${capture}.g.dart,${capture}.mapper.dart",
 		},
+		"dart-barrel-file-generator.excludeFileList": [
+			"**/*.mapper.dart",
+		],
 	},
 }

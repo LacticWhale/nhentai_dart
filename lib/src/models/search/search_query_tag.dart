@@ -1,14 +1,14 @@
 import 'package:meta/meta.dart';
 
-import '../tag.dart';
+import '../tags.dart';
 import 'search_query.dart';
 
 
 /// Search query with tag.
 @immutable
-class SearchQueryTag implements SearchQuery {
+class const SearchQueryTag(this.tag) implements SearchQuery {
   /// Creates a tag query.
-  const SearchQueryTag(this.tag);
+  this;
 
   /// Underlying search tag.
   final Tag tag;
@@ -17,8 +17,8 @@ class SearchQueryTag implements SearchQuery {
   String toString() => '${tag.type.name}:"$tag"';
 }
 
-/// Extension to help 
+/// Extension to help
 extension SearchQueryTagExtension on Tag {
   /// [SearchQuery] based on this tag.
-  SearchQueryTag get query => SearchQueryTag(this); 
+  SearchQueryTag get query => SearchQueryTag(this);
 }

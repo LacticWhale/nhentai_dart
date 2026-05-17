@@ -11,3 +11,6 @@ pubspec.lock
 
 doc/
 example/_local_test.dart
+
+# MacOS
+.DS_Store

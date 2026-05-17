@@ -1,5 +1,6 @@
 export 'search/search.dart';
 export 'search/search_query.dart';
+export 'search/search_query_full.dart';
 export 'search/search_query_tag.dart';
 export 'search/search_query_text.dart';
 export 'search/search_result.dart';

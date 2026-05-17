@@ -1,3 +1,11 @@
+## 2.0.0-dev.1
+- BREAKING: Reworked the API surface for API v2 with a new `Api` facade.
+- BREAKING: Introduced repository-based endpoints for books, search, tags,
+  comments, users, auth, and root operations.
+- BREAKING: Added authentication support for Bearer user tokens and API keys.
+- BREAKING: Updated to `dart_mappable ^4.8.0`.
+- Updated examples and documentation for the new API implementation.
+
 ## 1.0.0-wip
 - BREAKING: Requires Dart 3.0.0
 - **BREAKING**: Removed `_prefixed` libraries use Dart prefixes instead
@@ -14,7 +22,7 @@
 - BREAKING: Migrate to `dart_mappable: ^3.1.0`.
   You may need to call `initializeMappers` if you use data models other than via
   `parse` methods.
-- BREAKING: `Image`, `ImageThumbnail`, `Cover` and `CoverThumbnail` are now 
+- BREAKING: `Image`, `ImageThumbnail`, `Cover` and `CoverThumbnail` are now
   `final`.
 - BREAKING: `SearchQuery` is now an `interface` class.
 - BREAKING: `ImageType` is now a `sealed` class, change existing declarations to

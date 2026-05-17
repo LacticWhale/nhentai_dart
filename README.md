@@ -34,26 +34,26 @@ import 'package:nhentai/nhentai.dart';
 ```
 Create client instance:
 ```dart
-final api = API();
+final api = Api.fromHttpClient(
+  userAgent: 'nhentai_dart_example/1.0',
+);
 ```
 
 Get the data:
 ```dart
-/// Throws if book is not found, or parse failed, see docs.
-final Book book = await api.getBook(421025);
+final search = await api.search.searchSinglePage('language:japanese');
+final book = await api.books.getById(search.result.first.id, include: ['pages', 'tags']);
 
-// Short book summary
-print(
-  'Book: $book\n'
-  'Artists: ${book.tags.artists.join(', ')}\n'
-  'Languages: ${book.tags.languages.join(', ')}\n'
-  'Cover: ${api.hosts.getImageUrl(book.cover)}\n'
-  'First page: ${api.hosts.getImageUrl(book.pages.first)}\n'
-  'First page thumbnail: ${api.hosts.getImageUrl(book.pages.first.thumbnail)}',
-);
+print('Title: ${book.title.pretty}');
+print('Tags: ${book.tags.map((tag) => tag.name).join(', ')}');
+print('Pages: ${book.pages.length}');
 ```
 
-See more usage at [example](example/) folder.
+See more usage in the `example/` folder:
+
+- `example/basic.dart`
+- `example/hosts.dart`
+- `example/auth.dart`
 
 ## License
 

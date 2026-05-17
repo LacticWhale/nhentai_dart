@@ -1,1 +1,5 @@
 include: package:zekfad_lints/lib.yaml
+
+analyzer:
+  enable-experiment:
+    - primary-constructors

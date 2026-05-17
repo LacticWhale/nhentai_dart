@@ -1,7 +1,13 @@
+import 'package:dart_mappable/dart_mappable.dart';
+
+part 'search_sort.mapper.dart';
+
+
 /// Search sorting options.
+@MappableEnum()
 enum SearchSort {
   /// Sort by recent uploads.
-  recent(),
+  recent('date'),
   /// Sort by popular uploads.
   popular('popular'),
   /// Sort by popular over the last month uploads.
@@ -12,7 +18,7 @@ enum SearchSort {
   popularToday('poplar-today');
 
   /// Creates a search sort.
-  const SearchSort([ this.value = '', ]);
+  const SearchSort([ this.value = 'date', ]);
 
   /// String value of search parameter.
   final String value;
