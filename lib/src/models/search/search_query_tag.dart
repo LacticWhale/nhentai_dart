@@ -14,7 +14,7 @@ class const SearchQueryTag(this.tag) implements SearchQuery {
   final Tag tag;
 
   @override
-  String toString() => '${tag.type.name}:"$tag"';
+  String toString() => '${tag.type.name}:"${tag.name}"';
 }
 
 /// Extension to help

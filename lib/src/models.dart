@@ -10,6 +10,7 @@ import 'package:dart_mappable/dart_mappable.dart';
 export 'models/api.dart';
 export 'models/auth.dart';
 export 'models/book.dart';
+export 'models/comment.dart';
 export 'models/favorite.dart';
 export 'models/image.dart';
 export 'models/paginated.dart';
